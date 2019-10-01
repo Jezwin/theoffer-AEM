@@ -1,0 +1,23 @@
+.article1 {
+  text-align: center;
+}
+.article1__article {
+  padding: 70px 15px;
+  max-width: 730px;
+  margin: auto;
+}
+.article1__h1 {
+  font-size: 2.3rem;
+}
+.article1__p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+@media (max-width: 1000px) {
+  .article1__h1 {
+    font-size: 1.6rem;
+  }
+  .article1__p {
+    font-size: 1.2rem;
+  }
+}

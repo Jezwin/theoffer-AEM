@@ -1,0 +1,153 @@
+.footer {
+  margin: 0;
+  padding: 0;
+}
+.footer__span {
+  font-weight: bold;
+}
+.footer__link {
+  color: #1d5799;
+}
+.footer__first {
+  background-color: #f2f2f2;
+}
+.footer__item {
+  padding-bottom: 10px;
+  font-size: 1em;
+  color: #333;
+}
+.footer__span {
+  font-weight: 400;
+}
+.footer__noList {
+  padding-top: 4px;
+  padding-bottom: 100px;
+}
+.footer__article {
+  color: #333;
+  font-size: 1rem;
+  padding: 0 20px 35px 41px;
+}
+.footer__writing {
+  padding-top: 26px;
+  max-width: 1000px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .footer__item {
+    font-size: 0.8rem;
+  }
+  .footer__article {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.9rem;
+  }
+}
+.fsocial {
+  background-color: #e5e5e5;
+}
+.fsocial__writing {
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.fsocial__list {
+  padding: 0 0 0 31px;
+}
+.fsocial__item {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  padding-right: 10px;
+}
+.fsocial__bitem {
+  font-weight: bold;
+  color: #666;
+}
+.fsocial__link {
+  font-weight: bold;
+  color: #1d5799;
+}
+.footerCopy {
+  background: #e5e5e5;
+  padding-top: 26px;
+  padding-bottom: 10px;
+}
+.footerCopy__content {
+  max-width: 1000px;
+  margin: auto;
+}
+.footerCopy__item {
+  font-size: 12px;
+  color: #666;
+}
+.footerCopy__link {
+  color: #1d5799;
+  font-weight: bold;
+}
+.footerCopy__link--weight-bold {
+  font-size: 10px;
+}
+
+.flist {
+  background-color: #999;
+}
+.flist__writing {
+  padding-top: 30px;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+}
+.flist__link {
+  color: white !important;
+}
+.flist__item {
+  max-width: 170px;
+  padding-bottom: 15px;
+  color: white !important;
+  font-size: 14px;
+  list-style-type: none;
+  font-weight: bold;
+}
+@media (max-width: 1025px) {
+  .flist__link {
+    font-size: 0.85rem !important;
+  }
+}
+
+
+.accordion__card {
+  background-color: #5e5d5d !important;
+}
+.accordion__cardheader {
+  padding: 0 !important;
+  background-color: #999 !important;
+}
+.accordion__btn {
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: bold;
+}
+.accordion__content {
+  background-color: #5e5d5d !important;
+}
+.accordion__list {
+  list-style-type: none;
+}
+.accordion__a {
+  color: white !important;
+  font-size: 14px;
+}
+.accordion .btn.btn-link::before {
+  content: "\25BC ";
+  font-weight: bolder;
+  font-size: 10px;
+}
+.accordion .btn.btn-link.collapsed::before {
+  content: "\25B8 ";
+  font-size: 20px;
+  font-weight: bolder;
+}
+

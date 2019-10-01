@@ -1,0 +1,30 @@
+.socialmedia__list {
+  padding: 0;
+  position: absolute;
+  bottom: 170px;
+  left: 20px;
+  margin: 0;
+}
+.socialmedia__item {
+  list-style-type: none;
+  width: 30px;
+  height: 30px;
+}
+.socialmedia__icon {
+  opacity: 0.7;
+}
+@media (max-width: 1088px) {
+  .socialmedia__list {
+    bottom: 0;
+    left: 0;
+  }
+  .socialmedia__item {
+    display: inline-block;
+    width: 35px;
+    height: 40px;
+  }
+  .socialmedia__icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}

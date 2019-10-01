@@ -1,0 +1,42 @@
+.aftabs {
+.cmp-tabs__tablist {
+
+justify-content: space-around;
+
+}
+.cmp-tabs__tab {
+color: #7f7f7f;
+font-size: 22px;
+outline: none;
+padding: 2px 2px;
+}
+
+.cmp-tabs__tab--active {
+
+    font-weight : bold;
+    color: #00294b;
+    border-bottom : 5px solid #b42573 !important;
+}
+
+.cmp-tabs__tab:hover {
+
+ border-bottom : 5px solid #b42573 ;
+}
+}
+
+@media (max-width: 1024px) {
+
+    .aftabs {
+
+        .cmp-tabs__tablist{
+
+		display: none;
+
+        }
+
+        .cmp-tabs__tabpanel{
+            display: contents;
+        }
+
+    }
+}

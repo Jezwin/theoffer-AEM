@@ -16,9 +16,13 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Text"
                         name="./text"/>
+                    <doo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                        fieldLabel="foo"
+                        name="./doo"/>
                 </items>
             </column>
         </items>
     </content>
 </jcr:root>
-

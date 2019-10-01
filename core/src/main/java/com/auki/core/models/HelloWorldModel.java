@@ -14,13 +14,11 @@
  *  limitations under the License.
  */
 package com.auki.core.models;
-import com.auki.core.models.PageService;
 
 import static org.apache.sling.api.resource.ResourceResolver.PROPERTY_RESOURCE_TYPE;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-import javax.inject.Named;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -32,6 +30,7 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.apache.sling.settings.SlingSettingsService;
 
+
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 
@@ -39,12 +38,11 @@ import com.day.cq.wcm.api.PageManager;
 public class HelloWorldModel {
 
     @ValueMapValue(name=PROPERTY_RESOURCE_TYPE, injectionStrategy=InjectionStrategy.OPTIONAL)
-    @Inject
-    private PageService ps;
- 
-    @Inject @Named("sling:resourceType") @Default(values="No resourceType")
+    @Default(values="No resourceType")
     protected String resourceType;
-
+    
+    
+    
     @OSGiService
     private SlingSettingsService settings;
     @SlingObject
@@ -52,18 +50,17 @@ public class HelloWorldModel {
     @SlingObject
     private ResourceResolver resourceResolver;
 
-    private String message;
+    private String message; 
 
     @PostConstruct
     protected void init() {
         PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
         Page currentPage = pageManager.getContainingPage(currentResource);
 
-        message = "\tHello World!\n"
+        message = "\t\n"
             + "\tThis is instance: " + settings.getSlingId() + "\n"
             + "\tResource type is: " + resourceType + "\n"
             + "\tCurrent page is: " + (currentPage != null ? currentPage.getPath() : "") + "\n";
-        message += "\tNew Page name is: " + ps.CreatePage("AEM_PAGE") + "\n";
     }
 
     public String getMessage() {

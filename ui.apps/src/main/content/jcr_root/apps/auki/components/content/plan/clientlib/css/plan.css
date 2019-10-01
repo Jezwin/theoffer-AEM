@@ -1,0 +1,53 @@
+.fcontainer {
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+.fcontainer__content {
+  position: relative;
+  left: 106px;
+  top: 60px;
+  padding-left: 80px;
+  padding-right: 21px;
+}
+.fcontainer__subheading {
+  font-size: 22px !important;
+}
+.fcontainer__para {
+  font-size: 21px !important;
+}
+.fcontainer__calp {
+  font-size: 16px !important;
+}
+.fcontainer__article {
+  line-height: 2;
+}
+.fcontainer__link {
+  font-weight: bold !important;
+  font-size: 19px;
+  text-decoration: none !important;
+}
+.fcontainer__img {
+  padding-left: 70px;
+}
+@media (max-width: 1200px) {
+  .fcontainer__content {
+    padding-left: 10px;
+  }
+  .fcontainer__img {
+    max-width: 455px;
+    padding-top: 175px;
+  }
+}
+@media (max-width: 991px) {
+  .fcontainer__img {
+    max-width: 100%;
+  }
+  .fcontainer__content {
+    text-align: center;
+    left: 0;
+  }
+  .fcontainer__cal {
+    text-align: left;
+    padding-left: 30px;
+  }
+}

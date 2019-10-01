@@ -1,0 +1,27 @@
+<template data-sly-template.item="${@ list, item}">
+    <article class="offer__item">
+        <a href="${item.path @ extension='html'}" >
+        	<sly data-sly-resource="${item.path @ appendPath='/_jcr_content/root/responsivegrid/image', resourceType='auki/components/content/image'}"></sly>
+</a>
+
+            <div class="offer__item-container">
+
+               
+
+ <span data-sly-resource="${item.path @ appendPath='/_jcr_content/root/responsivegrid/title', resourceType='auki/components/content/title'}"></span>
+
+ <div class="offer__item-description">
+<div class="titleandlink">
+				 <sly data-sly-resource="${item.path @ appendPath='/_jcr_content/root/responsivegrid/text', resourceType='auki/components/content/text'}"></sly>
+
+
+<a class="learnmore" href="/content/auki/test/offerlandingpage/${item.title}.html">Learn More</a>
+				</div>
+</div>
+
+
+            </div>
+
+
+    </article>
+</template>

@@ -1,0 +1,145 @@
+.nav2 {
+  padding: 0 !important;
+}
+.nav2__hamIcon {
+  margin-right: 15px;
+}
+.nav2__logo {
+  padding-left: 40px;
+}
+.nav2__items {
+  margin-right: 30px;
+}
+.nav2__body {
+  text-align: end;
+  justify-content: flex-end;
+}
+.nav2__link {
+  font-weight: bold;
+  font-size: 14px;
+  color: black !important;
+  padding-top: 21px;
+}
+.nav2__link:hover {
+  background-color: #009adf;
+  color: white !important;
+}
+.nav2__ul {
+  padding-top: 20px;
+}
+.nav2__searchInput {
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 200px;
+}
+.nav2__searchBtn {
+  width: 28px;
+  height: 28px;
+}
+.nav2__search {
+  padding-right: 25px;
+  padding-top: 17px;
+}
+@media (max-width: 767px) {
+  .nav2 {
+    height: fit-content;
+  }
+  .nav2__items {
+    margin: 0;
+    text-align: center;
+  }
+  .nav2__search {
+    padding-top: 60px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .nav2__searchInput {
+    order: 2;
+  }
+  .nav2__searchBtn {
+    order: 1;
+  }
+  .nav2 ::-webkit-input-placeholder {
+    color: transparent;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .nav2 {
+    height: 185px;
+  }
+  .nav2__ul {
+    width: 100%;
+    position: absolute;
+    justify-content: space-around;
+    padding-top: 5px;
+    margin: 0;
+    left: 8px;
+    top: 65%;
+  }
+  .nav2__link {
+    font-size: 0.7rem;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}
+
+
+.nav1 {
+  background-color: black;
+  height: 32px;
+  width: 100%;
+  margin: 0!important;
+}
+.nav1__left, .nav1__right, .nav1__leftList, .nav1__rightList, .nav1__item, .nav1__link {
+  height: 32px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style-type: none;
+  text-decoration: none !important;
+}
+.nav1__leftLink {
+  padding: 10px 35px 10px 35px;
+}
+.nav1__right {
+  background-color: black;
+}
+.nav1__rightList {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+.nav1__Ritem {
+  width: 153px;
+  text-align: center;
+  border-left: 1px solid white;
+}
+.nav1__link {
+  color: white !important;
+  font-size: 12px;
+  font-weight: 500;
+}
+.nav1__item:hover {
+  background-color: #009adf;
+}
+.nav1__item--blue {
+  border-right: 1px solid white;
+  background-color: #009adf;
+}
+@media (max-width: 767px) {
+  .nav1__Ritem {
+    border: 1px solid white;
+    width: 34%;
+  }
+  .nav1__left {
+    text-align: center;
+    padding: 0;
+  }
+  .nav1__rightList {
+    justify-content: center;
+    padding-right: 0;
+  }
+  .nav1__item--margin--auto {
+    margin: auto !important;
+  }
+}

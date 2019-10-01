@@ -1,0 +1,29 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientLib.css @categories='modal'}"></sly>
+</sly>
+
+<div class="videomodal">
+    <ul class="videomodal__list">
+        <li class="videomodal__item">
+            <h3 style="text-align: center;font-family: 'Raleway', sans-serif;">Watch the video<br/>presentation</h3>
+        </li>
+        <li class="videomodal__item"><button class="videomodal__btn" type="button" src="//www.youtube.com/embed/YE7VzlLtp-4" data-toggle="modal" data-target="#exampleModal"><span class="videomodal__playbtn">&#9656;</span></button>
+            <!-- Modal-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content videomodal__content">
+                        <div class="videomodal__closecontainer"><button class="videomodal__closebtn" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+                        <div class="modal-body" style="padding: 0;"><iframe id="video" width="100%" height="315px" src="" allow="autoplay" frameborder="0" allowscriptaccess="always" allowfullscreen="allowfullscreen"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="videomodal__item videomodal__item--padding-less">
+            <p class="videomodal__para">Lorem ipsum dolor sit amet, consectetu adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </li>
+    </ul>
+</div>
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+<sly data-sly-call="${clientLib.js @categories='modal'}"></sly>
+</sly>

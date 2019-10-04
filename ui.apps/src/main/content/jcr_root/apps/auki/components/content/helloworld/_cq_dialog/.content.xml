@@ -16,11 +16,32 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Text"
                         name="./text"/>
-                    <doo
+                    <make-startDate-string
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
-                        fieldLabel="foo"
-                        name="./doo"/>
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/hidden"
+                        about="This causes eventStartDate to be saved as a String in JCR instead of Date"
+                        name="./eventstartdate@TypeHint"
+                        value="String"/>
+                    <eventstartdate
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                        fieldLabel="Start Date"
+                        name="./eventstartdate"
+                        required="{Boolean}true"
+                        valueFormat="YYYY/MM/DD"/>
+                    <make-endDate-string
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/hidden"
+                        about="This causes eventEndDate to be saved as a String in JCR instead of Date"
+                        name="./eventenddate@TypeHint"
+                        value="String"/>
+                    <eventenddate
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                        fieldLabel="End Date"
+                        name="./eventenddate"
+                        required="{Boolean}true"
+                        valueFormat="YYYY/MM/DD"/>
                 </items>
             </column>
         </items>

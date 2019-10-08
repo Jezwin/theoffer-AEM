@@ -1,0 +1,20 @@
+<sly data-sly-use.page="com.auki.core.models.OfferServiceModel">
+
+
+<ul data-sly-list.item="${page.offerListReturn}" class="cmp-custom-list">
+<li>
+
+
+<img src="${item.imagePath}" height=260px width=260px/>
+
+<div class="offer__container">
+
+<h4 class="title">${item.title}</h4>
+<h5>${page.eventStartDate}-${page.eventEndDate}</h5>
+<p>${item.description}</p>
+</div>
+
+</li>
+
+</ul>
+</sly>

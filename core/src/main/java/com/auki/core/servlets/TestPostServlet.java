@@ -13,6 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+
+import com.auki.core.services.PageService;
 
 @Component(service=Servlet.class,
 property={
@@ -26,6 +29,11 @@ property={
 public class TestPostServlet extends SlingAllMethodsServlet  {
 
 	private static final long serialVersionUID = 1L;
+	
+	@Reference
+	private PageService pageService;
+	
+	
  
     @Override
     protected void doPost(final SlingHttpServletRequest req,
@@ -34,25 +42,29 @@ public class TestPostServlet extends SlingAllMethodsServlet  {
 	    	
 	    	String name = req.getParameter("name");
 	    	String description = req.getParameter("description");
-	    	//resp.setContentType("text/plain");
-	    	//resp.getWriter().write(name);
+	    	String date = req.getParameter("date");
+	    	String imagePath = req.getParameter("imagepath");
+	    	pageService.CreatePage(name, description, date, imagePath);
 	    	
 	    	JSONObject obj = new JSONObject();
+	    	
     		try {
+    
 				obj.put("name", name);
 				obj.put("desc", description);
+				obj.put("date", date);
+				obj.put("imagepath", imagePath);
+				//obj.put("page", page);
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-    		 resp.setContentType("application/json");
+    		resp.setContentType("application/json");
  	        resp.setCharacterEncoding("utf-8");
- 	        
-    	
     		resp.getWriter().write(obj.toString());
-   
-	    		
-       
+    		
+    		
+    		
         
     }
 }
